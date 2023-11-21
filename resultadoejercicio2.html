@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Resultado Ejercicio 2{% endblock %}
+
+{% block content %}
+    <h1>Resultado Ejercicio 2</h1>
+
+    {% if resultado %}
+        <p>{{ resultado }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Volver al Menú Principal</a>
+{% endblock %}

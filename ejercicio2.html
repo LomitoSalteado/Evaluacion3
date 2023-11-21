@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Ejercicio 2{% endblock %}
+
+{% block content %}
+    <h1>Ejercicio 2</h1>
+
+    <!-- Contenido específico del ejercicio 2 -->
+    <form action="{{ url_for('ejercicio2') }}" method="post">
+        <label for="nombre1">Nombre 1:</label>
+        <input type="text" id="nombre1" name="nombre1" required>
+
+        <label for="nombre2">Nombre 2:</label>
+        <input type="text" id="nombre2" name="nombre2" required>
+
+        <label for="nombre3">Nombre 3:</label>
+        <input type="text" id="nombre3" name="nombre3" required>
+
+        <button class="button button1" type="submit">Enviar</button>
+    </form>
+
+    {% if resultado %}
+        <p>{{ resultado }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Volver al Menú Principal</a>
+{% endblock %}
+
+
+
